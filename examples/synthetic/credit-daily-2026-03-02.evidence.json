@@ -1,0 +1,89 @@
+{
+  "status": "draft",
+  "business_date": "2026-03-02",
+  "catalog_version": "demo-v2+base-v1.9-donghua-eed864947599",
+  "markdown_sha256": "1c0eabde90d1a14760f984bced34bbe400f11d38c0074a502fc8bd07e1e50a2d",
+  "evidence": [
+    {
+      "metric_id": "application_count",
+      "name": "申请笔数",
+      "value": "2",
+      "unit": "笔",
+      "definition": "业务日新增申请事件数，按 application_id 去重；每日事件不得跨日重复。",
+      "catalog_version": "demo-v2+base-v1.9-donghua-eed864947599",
+      "batch_citations": [
+        {
+          "id": "batch:synthetic-2026-03-02:2026-03-02",
+          "source": "ads_credit_daily",
+          "updated_at": "2026-10-12T01:29:36.336842+00:00",
+          "biz_date": "2026-03-02",
+          "version": "synthetic-2026-03-02",
+          "data_status": "FINAL"
+        }
+      ],
+      "metric_citation": {
+        "id": "metric:application_count",
+        "title": "申请笔数",
+        "source": "credit/data/catalog.json",
+        "version": "demo-v2+base-v1.9-donghua-eed864947599",
+        "updated_at": "2026-09-20T22:00:00+08:00",
+        "domain": "credit"
+      },
+      "trace_id": "b4f6ea1fa6004b45895303afde64118b"
+    },
+    {
+      "metric_id": "approval_rate",
+      "name": "申请通过率",
+      "value": "1.0",
+      "unit": "比例",
+      "definition": "同一统计范围内通过申请笔数 / 申请笔数；分母为零返回 null；跨日按分子分母重新汇总，不平均每日比率。",
+      "catalog_version": "demo-v2+base-v1.9-donghua-eed864947599",
+      "batch_citations": [
+        {
+          "id": "batch:synthetic-2026-03-02:2026-03-02",
+          "source": "ads_credit_daily",
+          "updated_at": "2026-10-12T01:29:36.336842+00:00",
+          "biz_date": "2026-03-02",
+          "version": "synthetic-2026-03-02",
+          "data_status": "FINAL"
+        }
+      ],
+      "metric_citation": {
+        "id": "metric:approval_rate",
+        "title": "申请通过率",
+        "source": "credit/data/catalog.json",
+        "version": "demo-v2+base-v1.9-donghua-eed864947599",
+        "updated_at": "2026-09-20T22:00:00+08:00",
+        "domain": "credit"
+      },
+      "trace_id": "dfb75e5f82e640748d2af2ede8f29936"
+    },
+    {
+      "metric_id": "loan_balance",
+      "name": "贷款余额",
+      "value": "27000.0",
+      "unit": "元",
+      "definition": "业务日末借据剩余本金之和；底层整数分，查询转元；属于时点指标，多日查询必须保留日期维度。",
+      "catalog_version": "demo-v2+base-v1.9-donghua-eed864947599",
+      "batch_citations": [
+        {
+          "id": "batch:synthetic-2026-03-02:2026-03-02",
+          "source": "ads_credit_daily",
+          "updated_at": "2026-10-12T01:29:36.336842+00:00",
+          "biz_date": "2026-03-02",
+          "version": "synthetic-2026-03-02",
+          "data_status": "FINAL"
+        }
+      ],
+      "metric_citation": {
+        "id": "metric:loan_balance",
+        "title": "贷款余额",
+        "source": "credit/data/catalog.json",
+        "version": "demo-v2+base-v1.9-donghua-eed864947599",
+        "updated_at": "2026-09-20T22:00:00+08:00",
+        "domain": "credit"
+      },
+      "trace_id": "06a7628ce7034f1baf3d1c010da1b422"
+    }
+  ]
+}
